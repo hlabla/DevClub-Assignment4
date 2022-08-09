@@ -13,7 +13,7 @@ function myFunction(req, res) {
 	let a = -1;
 	for(let i=4 ; i>=0 ; i--){
 		a = -1;
-		for(let j=0 ; j<5 ; j++){
+		for(let j=4 ; j>=0 ; j--){
 			if (guess[i]==secret[j]){
 				a = j;
 			}
