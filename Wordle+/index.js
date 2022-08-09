@@ -7,14 +7,15 @@ function myFunction(req, res) {
 	console.log(req.url);
 	const GUESS = req.url; // Write logic to parse the word which the user guessed from the URL string
 	const G = GUESS.split("=")[1];
+	// const G='CIGAR'
 	let feedback = ""; // Write logic to compare the word with the secret, and generate the feedback string
-	const secret = SECRET.split();
-	const guess = String(G).split();
+	const secret = SECRET.split("");
+	const guess = String(G).split("");
 	let a = -1;
-	for(let i=4 ; i>=0 ; i--){
+	for(let i=0 ; i<5 ; i++){
 		a = -1;
-		for(let j=4 ; j>=0 ; j--){
-			if (guess[i]==secret[j]){
+		for(let j=0 ; j<5 ; j++){
+			if (secret[i]==guess[j]){
 				a = j;
 			}
 		}
@@ -33,3 +34,4 @@ function myFunction(req, res) {
 }
 
 http.createServer(myFunction).listen(8080);
+
